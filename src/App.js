@@ -1,40 +1,26 @@
-import { useState } from 'react';
-import './App.css';
-import React  from 'react';
+import "./App.css";
+import React from "react";
+// import Blog from "./pages/Blogs";
+// import Contact from "./pages/Contact";
+// import Home from "./pages/Home";
+// import Layout from "./pages/Layout";
+// import { Routes, Route } from "react-router-dom";
+import "./css/style.css"
+import PersonList from "./API/PersonList";
 
-function handleSubmit(name, age){
-  //CALL API
-  
-}
-function App() {
-  
-  const [name, setName] = useState();
-  const [age, setAge] = useState();
-  
+const App = () => {
   return (
-    <div className="App">
-    <form>
-      <label>Enter your name
-        <input 
-         value ={name}
-          type="text\" 
-          onChange={e => setName(e.target.value)}
-          ></input>
-      </label>
-
-        <label>Enter your age
-        <input   
-        value={age}
-        type='text' 
-        onChange={e => setAge(e.target.value)}
-        ></input>
-        </label>
-
-        <button onClick={() => handleSubmit}>submit</button>
-
-    </form>
+    // <Routes>
+    //   <Route index element={<Layout />}></Route>
+    //   <Route path="/home" element={<Home />}></Route>
+    //   <Route path="blogs" element={<Blog />}></Route>
+    //   <Route path="contact" element={<Contact />}></Route>
+    // </Routes>
+    <div>
+      <PersonList />
     </div>
+    
   );
-}
+};
 
 export default App;
